@@ -1,5 +1,4 @@
 {
-  "name": "my-site",
   "private": true,
   "scripts": {
     "dev": "npx @11ty/eleventy --serve",
