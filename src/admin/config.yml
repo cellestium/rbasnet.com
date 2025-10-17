@@ -29,3 +29,5 @@ collections:
       - {label: "Thumbnail", name: "thumb", widget: "image", required: false}
       - {label: "Tags", name: "tags", widget: "list", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
+      - { label: "Aspect Ratio", name: "ratio", widget: "select",
+         options: ["wide-16x9", "square-1x1", "tall-3x4"], default: "wide-16x9" }
