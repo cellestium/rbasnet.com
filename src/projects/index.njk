@@ -1,0 +1,21 @@
+---
+permalink: "/projects/"
+---
+<section class="mosaic">
+  {% for p in collections.projects | reverse %}
+    {# map CMS ratio -> CSS class suffix #}
+    {% set r = "16x9" %}
+    {% if p.data.ratio == "square-1x1" %}{% set r = "1x1" %}
+    {% elif p.data.ratio == "tall-3x4" %}{% set r = "3x4" %}{% endif %}
+
+    {% include "components/card.njk"
+      title=p.data.title,
+      date=p.data.date,
+      image=p.data.image or p.data.thumb,
+      excerpt=p.data.excerpt,
+      cta_text=p.data.cta_text,
+      cta_url=p.data.cta_url,
+      ratio=r
+    %}
+  {% endfor %}
+</section>
