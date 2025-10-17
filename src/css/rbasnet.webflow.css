@@ -6375,3 +6375,46 @@ figcaption {
   font-style: normal;
   font-display: swap;
 }
+/* Grid */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+/* Card shell */
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #111;
+}
+
+/* Aspect ratios */
+.ratio-16x9  { aspect-ratio: 16 / 9; }
+.ratio-1x1   { aspect-ratio: 1 / 1; }
+.ratio-3x4   { aspect-ratio: 3 / 4; }
+
+/* Media fills the box */
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Overlay content (date, title, button) */
+.card-content {
+  position: absolute;
+  inset: 0;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,0.55) 100%);
+  color: #fff;
+}
+
+.card-title { margin: 6px 0 8px; }
+.card-date  { opacity: 0.8; font-size: 12px; }
+.card-btn   { align-self: flex-start; margin-top: 8px; }
